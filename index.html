@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--Use a form to let the user fill out a survey. Ask them to fill in their name, their favorite foods, their favorite music, and any other information you feel like. Include all form input types we've covered so far (except checkboxes; we'll learn more about those next week!)-->
+<html>
+  <head>
+    <title>More forms practice</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tell us everything</h1>
+      <div id="blanks">
+        <form>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input id="firstName" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender">
+              <option>Female</option>
+              <option>Male</option>
+              <option>Transgender</option>
+            </select>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="hairColor" value="blonde">
+              Blonde
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="hairColor" value="brunette">
+              Brunette
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="hairColor" value="black">
+              Black
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="hairColor" value="red">
+              Red
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="born">Date of birth:</label>
+            <input id="born" class="form-control" type="date">
+          </div>
+          <div class="form-group">
+            <label for="color">What is your favorite color?</label>
+            <input id="color" class="form-control" type="color">
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+      <div class="feedback">
+        <h1>Your Answers</h1>
+        <p>Hello, <span class="firstName"></span> <span class="lastName"></span>. You are <span class="gender"></span> and have <span class="hairColor"></span> hair. You were born on <span class="born"></span> and your favorite color is <span class="color"></span>.</p>
+      </div>
+    </div>
+  </body>
+</html>
